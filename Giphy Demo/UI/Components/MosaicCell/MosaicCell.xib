@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MosaicCell" id="gTV-IL-0wX" customClass="MosaicCell" customModule="Giphy_Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="127" height="106"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="127" height="106"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0i-mK-V1Z" customClass="ShimmeringView" customModule="Giphy_Demo" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="127" height="106"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="URp-A6-Izm" customClass="GIFImageView" customModule="Gifu">
+                        <rect key="frame" x="0.0" y="0.0" width="127" height="106"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="URp-A6-Izm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CUI-PD-PAp"/>
+                <constraint firstAttribute="bottom" secondItem="URp-A6-Izm" secondAttribute="bottom" id="Ftq-he-mCE"/>
+                <constraint firstItem="URp-A6-Izm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="H9O-YE-Xtl"/>
+                <constraint firstItem="Z0i-mK-V1Z" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ial-I5-9cq"/>
+                <constraint firstAttribute="trailing" secondItem="URp-A6-Izm" secondAttribute="trailing" id="Skq-xv-9Hx"/>
+                <constraint firstAttribute="bottom" secondItem="Z0i-mK-V1Z" secondAttribute="bottom" id="YgQ-f1-aYI"/>
+                <constraint firstItem="Z0i-mK-V1Z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iE2-rV-0C0"/>
+                <constraint firstAttribute="trailing" secondItem="Z0i-mK-V1Z" secondAttribute="trailing" id="sRP-in-AeN"/>
+            </constraints>
+            <size key="customSize" width="127" height="106"/>
+            <connections>
+                <outlet property="imageView" destination="URp-A6-Izm" id="ier-eL-9gq"/>
+                <outlet property="shimmeringView" destination="Z0i-mK-V1Z" id="P5G-95-YVj"/>
+            </connections>
+            <point key="canvasLocation" x="197.70992366412213" y="40.140845070422536"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
